@@ -15,14 +15,9 @@ class Storage {
 
     removeItem(itemToRemove) {
         const seachIndex = this.#items.indexOf(itemToRemove);
-        console.log(seachIndex);
 
-        const rezultItem = this.#items.splice(seachIndex);
-        console.log(rezultItem);
-       
-            
-            
-        
+        const rezultItem = this.#items.splice(seachIndex, 1);
+        return rezultItem;
     }
 
 }
