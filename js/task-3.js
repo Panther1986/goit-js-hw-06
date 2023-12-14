@@ -14,14 +14,14 @@ class StringBuilder {
     }
 
     padEnd(str) {
-        this.#value = str;
+   
         const unionStr = this.#value.concat(str);
         return unionStr;
     
     }
 
     padStart(str) {
-        this.#value = str;
+    
         const startUnion = this.#value.padStart(str);
         return startUnion;
         
