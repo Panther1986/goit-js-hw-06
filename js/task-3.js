@@ -1,9 +1,9 @@
 class StringBuilder {
-    initialValue = StringBuilder.value;
-    #value;
 
-    constructor({value}) {
-        this.#value = initialValue;
+    #value = "initialValue";
+
+    constructor(value) {
+        this.#value = value;
     }
 
     getValue() {
@@ -11,9 +11,15 @@ class StringBuilder {
     }
 
     padEnd(str) {
-        const unionStr = this.#value.concat(str);
+        const unionStr = this.#value.push(str);
         return unionStr;
     
+    }
+
+    padStart(str) {
+        const startUnion = this.#value.concat(str);
+        return startUnion;
+        
     }
 
 }
